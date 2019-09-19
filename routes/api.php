@@ -18,13 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/read','PostController@read');
 
-Route::get('/read',function (){
-   $result = post::all();
-   return response($result,200);
-});
+Route::get('/show/{id}','PostController@show');
 
-Route::get('/read/{page}',function ($page){
-    $result = post::all()->forPage($page,7);
-    return response($result->values(),200);
-});
+Route::get('/read/{page}','PostController@readPage');
+
+Route::post('/add','PostController@store');
