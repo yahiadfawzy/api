@@ -25,3 +25,5 @@ Route::get('/show/{id}','PostController@show');
 Route::get('/read/{page}','PostController@readPage');
 
 Route::post('/add','PostController@store');
+
+Route::post('/update/{id}','PostController@update');
