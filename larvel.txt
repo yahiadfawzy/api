@@ -1,0 +1,39 @@
+﻿-------------------------------------
+0 creat projet
+laravel new projectname
+-------------------------------------
+1 creat migration file
+php artisan make:migration create_posts_table --create=Posts
+-------------------------------------
+2 migrtate table
+php artisan migrate
+-------------------------------------
+3 run server
+php artisan serve 
+-------------------------------------
+4-creat table
+php artisan make:migration create_users_table --create=users
+-------------------------------------
+5-تعديل جدول
+php artisan make:migration add_is_admin_column_to_Posts_table --table=Posts
+ وروح على الملف الجديد وضيغ ال كولوم فى upوامسحه فى الdown
+-------------------------------------
+5-creat model
+php artisan make:model Comment -m
+
+--------------------------------------
+6-creat controller
+php artisan make:controller controllername
+--------------------------------------
+7-creat rs controller
+php artisan make:controller controllername --resource
+--------------------------------------
+8-creat seeder (to bind data)
+php artisan make:seed seedername
+--------------------------------------
+9-execute seed (say seed insert dummy data in db)
+php artisan db:seed
+--------------------------------------
+10-creat resource to controll result returned
+php artisan make:resource resourcename
+--------------------------------------
